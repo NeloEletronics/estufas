@@ -1,0 +1,12 @@
+
+[Unit]
+Description=Temperature Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/estufas/src/server.py & > /home/pi/Desktop/log.txt 2>&1
+
+
+[Install]
+WantedBy=multi-user.target
