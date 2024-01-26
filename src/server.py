@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from SensorManager import TemperatureSensor
+from SensorSHT30 import TemperatureSensor
 
 app = Flask(__name__)
 api = Api(app)
 
-sensor = TemperatureSensor(4)
+sensor = TemperatureSensor()
 
 
 class Estufa2(Resource):
