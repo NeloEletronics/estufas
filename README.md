@@ -12,3 +12,7 @@ Activar serviço
 cp estufas/service/temperature.service /lib/systemd/system
 sudo systemctl daemon-reload ???
 sudo systemctl enable temperature.service
+
+## Watchdog
+crontab -e
+* * * * * /home/pi/estufas/check_temperature_service.sh
